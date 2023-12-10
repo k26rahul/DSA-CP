@@ -1,5 +1,3 @@
-from string import ascii_lowercase, ascii_uppercase
-
 T = int(input())
 
 for _ in range(T):
@@ -25,10 +23,10 @@ for _ in range(T):
         mask[i_last_up[-1]] = False
         i_last_up = i_last_up[:-1]
 
-    elif letter in ascii_lowercase:
+    elif letter.islower():
       i_last_low.append(i)
 
-    elif letter in ascii_uppercase:
+    elif letter.isupper():
       i_last_up.append(i)
 
   # print(mask)
